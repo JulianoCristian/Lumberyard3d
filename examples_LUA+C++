@@ -1,0 +1,26 @@
+\\To expose C++ functions to scripts, implement a new class derives from CScriptableBase, as shown in the following example.
+
+
+classCScriptBind_Game :  
+    publicCScriptableBase
+{
+public:
+    CScriptBind_Game( ISystem* pSystem );
+    virtual ~CScriptBind_Game() {}
+    
+    intGameLog(IFunctionHandler* pH, char* pText);
+};
+
+\\Add the following code inside the class constructor:
+
+Init(pSystem->GetIScriptSystem(), pSystem);
+SetGlobalName("Game");
+
+#undef SCRIPT_REG_CLASSNAME
+#define SCRIPT_REG_CLASSNAME &CScriptBind_Game::
+
+SCRIPT_REG_TEMPLFUNC(GameLog, "text");
+
+\\In a Lua script, you can access your new ScriptBind function as follows:
+
+Game.GameLog("a message");
