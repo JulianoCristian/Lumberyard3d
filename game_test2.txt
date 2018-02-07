@@ -1,0 +1,17 @@
+import java.io.*;
+import javax.script.*;
+ 
+public class ScriptTest {
+   public static void main(String[] args) throws FileNotFoundException, ScriptException {
+      //Arquivo com nosso script
+      File scriptFile = new File("C:/Script.groovy");
+ 
+      //Contém todas ScriptEngines disponiveis
+      ScriptEngineManager engines = new ScriptEngineManager();
+ 
+      //Pega a ScriptEngine do groovy.
+      ScriptEngine engine = engines.getEngineByName("groovy");
+      Class<!--?--> clazz = (Class<!--?-->) engine.eval(new FileReader(scriptFile));
+      System.out.println(clazz);//imprime "class Hello"
+   }
+}
