@@ -6,12 +6,12 @@ public class ScriptTest {
       //Arquivo com nosso script
       File scriptFile = new File("C:/Script.groovy");
  
-      //Contém todas ScriptEngines disponiveis
+      //ContÃ©m todas ScriptEngines disponiveis
       ScriptEngineManager engines = new ScriptEngineManager();
  
       //Pega a ScriptEngine do groovy.
       ScriptEngine engine = engines.getEngineByName("groovy");
       Class<!--?--> clazz = (Class<!--?-->) engine.eval(new FileReader(scriptFile));
-      System.out.println(clazz);//imprime "class Hello"
+      System.out.println(clazz);//imprime "class Hello Lumberyard Dev"
    }
 }
