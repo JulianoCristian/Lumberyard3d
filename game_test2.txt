@@ -12,6 +12,6 @@ public class ScriptTest {
       //Pega a ScriptEngine do groovy.
       ScriptEngine engine = engines.getEngineByName("groovy");
       Class<!--?--> clazz = (Class<!--?-->) engine.eval(new FileReader(scriptFile));
-      System.out.println(clazz);//imprime "class Hello Lumberyard Dev"
+      System.out.println(clazz);//imprime "class Hello Lumberyard Developer"
    }
 }
