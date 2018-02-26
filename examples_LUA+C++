@@ -23,4 +23,4 @@ SCRIPT_REG_TEMPLFUNC(GameLog, "text");
 
 \\In a Lua script, you can access your new ScriptBind function as follows:
 
-Game.GameLog("a message");
+Game.GameLog("a message here");
