@@ -1,0 +1,16 @@
+local tempi = {
+	Properties = {
+		},
+	}
+
+function temps:OnActivate()
+
+end
+
+function temps:OnDeactivate()
+
+end
+
+return tempi
+
+
